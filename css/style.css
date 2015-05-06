@@ -9,6 +9,12 @@
 
 /* Basic */
 
+	col {
+		float: left;
+		width: 30%;
+	}
+
+
 	body {
 		background: #fff;
 	}
