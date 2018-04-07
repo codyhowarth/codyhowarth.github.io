@@ -1,0 +1,22 @@
+// Variable Overrides
+$theme-colors: ('primary': #489363);
+
+$body-bg: #d6d6d6;
+
+.jumbotron {
+  opacity: 50%;
+  background-color: transparent !important;
+  background-image: url('../assets/matrix2.jpg');
+  background-size: cover;
+  // background-color: #ffffff !important;
+  color: #ffffff;
+  border-top: 3px solid rgb(219, 219, 219);
+}
+
+.col-centered {
+  float: none;
+  margin: 0 auto;
+}
+
+// Bootstrap Sass Imports
+@import 'node_modules/bootstrap/scss/bootstrap';
