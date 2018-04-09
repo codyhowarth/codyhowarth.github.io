@@ -32,24 +32,34 @@ $theme-colors: ('primary': #489363);
 $body-bg: #d4dbd4;
 $font-family-sans-serif: computerModern;
 $headings-font-family: computerModernBold;
+$font-size-base: 1.4rem;
 
 // Overide grid and widths to be more condensed
-$grid-breakpoints: (
-  xs: 0,
-  sm: 276px,
-  md: 368px,
-  lg: 476px,
-  xl: 576px
-);
+// $grid-breakpoints: (
+//   xs: 0,
+//   sm: 276px,
+//   md: 368px,
+//   lg: 476px,
+//   xl: 576px
+// );
 
 $container-max-widths: (
-  sm: 300px,
-  md: 345px,
-  lg: 460px,
-  xl: 550px
+  sm: 459px,
+  md: 612px,
+  lg: 816px,
+  xl: 1000px
 );
 
 // --------------------------------------------------------------
+
+// Turn off link underline on hover
+a:hover,
+a:focus,
+a:active,
+a:visited,
+a:link {
+  text-decoration: none !important;
+}
 
 #job-title {
   font-family: PressStart2P, cursive;
@@ -71,9 +81,24 @@ $container-max-widths: (
 
 .footer {
   font-family: computerModernItalic, sans-serif;
-  font-size: 0.85em;
+  font-size: 0.7em;
   background-color: #c7e0d1;
 }
 
 // Bootstrap Sass Imports (has to be at the end to work)
 @import 'node_modules/bootstrap/scss/bootstrap';
+
+// Shrink header font properly for mobile
+@include media-breakpoint-down(lg) {
+  #job-title {
+    font-family: PressStart2P, cursive;
+    font-size: 2em;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  #job-title {
+    font-family: PressStart2P, cursive;
+    font-size: 1.5em;
+  }
+}
