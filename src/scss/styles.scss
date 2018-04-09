@@ -1,22 +1,79 @@
-// Variable Overrides
+// Setup for using fonts (different filetypes for cross-device support)
+@mixin font($font-family, $font-file) {
+  @font-face {
+    font-family: $font-family;
+    src: url($font-file+'.eot');
+    src: url($font-file+'.eot?#iefix') format('embedded-opentype'),
+      url($font-file+'.woff') format('woff'),
+      url($font-file+'.ttf') format('truetype'),
+      url($font-file+'.svg#aller') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+@include font(
+  'PressStart2P',
+  '../assets/fonts/PressStart2P/PressStart2P-Regular'
+);
+@include font('computerModern', '../assets/fonts/computer-modern/CMUSansSerif');
+@include font(
+  'computerModernBold',
+  '../assets/fonts/computer-modern/CMUSansSerif-Bold'
+);
+@include font(
+  'computerModernItalic',
+  '../assets/fonts/computer-modern/CMUSansSerif-Oblique'
+);
+
+// ----------------- Variable Overrides ------------------------
 $theme-colors: ('primary': #489363);
 
-$body-bg: #d6d6d6;
+$body-bg: #d4dbd4;
+$font-family-sans-serif: computerModern;
+$headings-font-family: computerModernBold;
+
+// Overide grid and widths to be more condensed
+$grid-breakpoints: (
+  xs: 0,
+  sm: 276px,
+  md: 368px,
+  lg: 476px,
+  xl: 576px
+);
+
+$container-max-widths: (
+  sm: 300px,
+  md: 345px,
+  lg: 460px,
+  xl: 550px
+);
+
+// --------------------------------------------------------------
+
+#job-title {
+  font-family: PressStart2P, cursive;
+  font-size: 3em;
+}
+
+.navbar-nav {
+  font-size: 1em;
+}
 
 .jumbotron {
-  opacity: 50%;
   background-color: transparent !important;
   background-image: url('../assets/matrix2.jpg');
   background-size: cover;
-  // background-color: #ffffff !important;
   color: #ffffff;
+  text-align: center;
   border-top: 3px solid rgb(219, 219, 219);
 }
 
-.col-centered {
-  float: none;
-  margin: 0 auto;
+.footer {
+  font-family: computerModernItalic, sans-serif;
+  font-size: 0.85em;
+  background-color: #c7e0d1;
 }
 
-// Bootstrap Sass Imports
+// Bootstrap Sass Imports (has to be at the end to work)
 @import 'node_modules/bootstrap/scss/bootstrap';
