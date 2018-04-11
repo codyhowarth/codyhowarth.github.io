@@ -1,0 +1,150 @@
+// Setup for using fonts (different filetypes for cross-device support)
+@mixin font($font-family, $font-file) {
+  @font-face {
+    font-family: $font-family;
+    src: url($font-file+'.eot');
+    src: url($font-file+'.eot?#iefix') format('embedded-opentype'),
+      url($font-file+'.woff') format('woff'),
+      url($font-file+'.ttf') format('truetype'),
+      url($font-file+'.svg#aller') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+@include font(
+  'PressStart2P',
+  '../assets/fonts/PressStart2P/PressStart2P-Regular'
+);
+@include font('computerModern', '../assets/fonts/computer-modern/CMUSansSerif');
+@include font(
+  'computerModernBold',
+  '../assets/fonts/computer-modern/CMUSansSerif-Bold'
+);
+@include font(
+  'computerModernItalic',
+  '../assets/fonts/computer-modern/CMUSansSerif-Oblique'
+);
+
+// ----------------- Variable Overrides ------------------------
+$theme-colors: ('primary': #489363);
+
+$body-bg: #d4dbd4;
+$font-family-sans-serif: computerModern;
+$headings-font-family: computerModernBold;
+$font-size-base: 1.4rem;
+
+// Overide grid and widths to be more condensed
+// $grid-breakpoints: (
+//   xs: 0,
+//   sm: 276px,
+//   md: 368px,
+//   lg: 476px,
+//   xl: 576px
+// );
+
+$container-max-widths: (
+  sm: 459px,
+  md: 612px,
+  lg: 816px,
+  xl: 1000px
+);
+
+// --------------------------------------------------------------
+
+// Turn off link underline on hover
+a:hover,
+a:focus,
+a:active,
+a:visited,
+a:link {
+  text-decoration: none !important;
+}
+
+#job-title {
+  font-family: PressStart2P, cursive;
+  font-size: 3em;
+}
+
+.navbar-nav {
+  font-size: 1em;
+}
+
+.jumbotron {
+  background-color: transparent !important;
+  background-image: url('../assets/matrix2.jpg');
+  background-size: cover;
+  color: #ffffff;
+  text-align: center;
+  border-top: 3px solid rgb(219, 219, 219);
+}
+
+.subtitle {
+  font-size: 0.9em;
+}
+
+.customH3 a{
+  color: inherit;
+}
+
+.footer {
+  font-family: computerModernItalic, sans-serif;
+  font-size: 0.7em;
+  background-color: #c7e0d1;
+}
+
+// Bootstrap Sass Imports (has to be at the end to work)
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+// Shrink header font properly for mobile
+@include media-breakpoint-down(lg) {
+  #job-title {
+    font-family: PressStart2P, cursive;
+    font-size: 2em;
+  }
+  #mainBody {
+    font-size: 0.8em;
+  }
+
+  .customH3 {
+  font-size: 1.7rem;
+}
+
+ .rounded {
+   width: 200px;
+ }
+
+ #navBrandName {
+   font-size: 1.2rem;
+ }
+
+ .footer {
+  font-size: 0.6em;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  #job-title {
+    font-family: PressStart2P, cursive;
+    font-size: 1.5em;
+  }
+  #mainBody {
+    font-size: 0.8em;
+  }
+
+  .customH3 {
+  font-size: 1.7rem;
+}
+
+ .rounded {
+   width: 200px;
+ }
+
+ #navBrandName {
+   font-size: 1.2rem;
+ }
+
+ .footer {
+  font-size: 0.6em;
+  }
+}
