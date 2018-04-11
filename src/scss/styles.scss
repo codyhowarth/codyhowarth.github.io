@@ -102,11 +102,49 @@ a:link {
     font-family: PressStart2P, cursive;
     font-size: 2em;
   }
+  #mainBody {
+    font-size: 0.8em;
+  }
+
+  .customH3 {
+  font-size: 1.7rem;
+}
+
+ .rounded {
+   width: 200px;
+ }
+
+ #navBrandName {
+   font-size: 1.2rem;
+ }
+
+ .footer {
+  font-size: 0.6em;
+  }
 }
 
 @include media-breakpoint-down(sm) {
   #job-title {
     font-family: PressStart2P, cursive;
     font-size: 1.5em;
+  }
+  #mainBody {
+    font-size: 0.8em;
+  }
+
+  .customH3 {
+  font-size: 1.7rem;
+}
+
+ .rounded {
+   width: 200px;
+ }
+
+ #navBrandName {
+   font-size: 1.2rem;
+ }
+
+ .footer {
+  font-size: 0.6em;
   }
 }
