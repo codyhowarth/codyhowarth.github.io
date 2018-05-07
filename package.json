@@ -22,7 +22,7 @@
     "popper.js": "^1.14.3"
   },
   "devDependencies": {
-    "browser-sync": "^2.23.6",
+    "browser-sync": "^2.24.4",
     "gulp": "^3.9.1",
     "gulp-sass": "^4.0.0",
     "sitemap-generator-cli": "^7.2.0"
