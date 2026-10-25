@@ -10123,3 +10123,9 @@ body.terminal {
 @media (prefers-reduced-motion: reduce) {
   .term-cursor { animation: none; }
 }
+.term-project { flex-direction: row; flex-wrap: wrap; gap: 1.75rem; align-items: flex-start; }
+.term-project img { display: block; width: 300px; max-width: 100%; height: auto; border: 1px solid var(--term-line); border-radius: 4px; }
+.term-project > div { flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+.term-project h2 { margin: 0; font-family: var(--term-mono); font-size: 1.4rem; }
+.terminal .term-project .term-url { margin-bottom: 0.5rem; font-family: var(--term-mono); font-size: 0.8rem; color: var(--term-muted); overflow-wrap: anywhere; }
+.terminal .term-nav-links [aria-current="page"] { color: #fff; }
