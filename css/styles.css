@@ -10092,6 +10092,9 @@ body.terminal {
 .terminal #job-title { margin: 0 0 1.5rem; font-size: 4.5rem; line-height: 1.2; color: #fff; text-align: left; }
 .term-cursor { color: #4fd17e; animation: term-blink 1s steps(1) infinite; }
 @keyframes term-blink { 50% { opacity: 0; } }
+/* Faint glow band that slowly sweeps down the matrix background */
+.terminal::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none; background: url("../assets/matrix2.jpg") center top / cover; opacity: 0.12; mask-image: linear-gradient(transparent, #000 50%, transparent); mask-size: 100% 40%; mask-repeat: no-repeat; animation: term-rain 14s linear infinite; }
+@keyframes term-rain { from { mask-position: 0 -70%; } to { mask-position: 0 170%; } }
 .term-sub { font-family: var(--term-mono); font-size: 1.25rem; color: var(--term-accent); }
 .term-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1.5rem; }
 .term-window { background: var(--term-panel); border: 1px solid var(--term-line); border-radius: 8px; overflow: hidden; }
@@ -10122,6 +10125,7 @@ body.terminal {
 }
 @media (prefers-reduced-motion: reduce) {
   .term-cursor { animation: none; }
+  .terminal::before { display: none; }
 }
 .term-project { flex-direction: row; flex-wrap: wrap; gap: 1.75rem; align-items: flex-start; }
 .term-project img { display: block; width: 300px; max-width: 100%; height: auto; border: 1px solid var(--term-line); border-radius: 4px; }
