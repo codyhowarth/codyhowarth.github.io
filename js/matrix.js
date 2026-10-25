@@ -4,7 +4,8 @@
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
   var canvas = document.createElement('canvas');
-  canvas.className = 'term-rain';
+  // Inline so a cached older styles.css cannot leave the canvas in page flow
+  canvas.style.cssText = 'position: fixed; inset: 0; z-index: -1; pointer-events: none;';
   canvas.setAttribute('aria-hidden', 'true');
   document.body.prepend(canvas);
 

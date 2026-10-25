@@ -177,7 +177,6 @@ body.terminal {
 .terminal #job-title { margin: 0 0 1.5rem; font-size: 4.5rem; line-height: 1.2; color: #fff; text-align: left; }
 .term-cursor { color: #4fd17e; animation: term-blink 1s steps(1) infinite; }
 @keyframes term-blink { 50% { opacity: 0; } }
-.term-rain { position: fixed; inset: 0; z-index: -1; pointer-events: none; }
 .term-sub { font-family: var(--term-mono); font-size: 1.25rem; color: var(--term-accent); }
 .term-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1.5rem; }
 .term-window { background: var(--term-panel); border: 1px solid var(--term-line); border-radius: 8px; overflow: hidden; }
