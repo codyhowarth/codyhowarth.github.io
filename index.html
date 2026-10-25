@@ -5,116 +5,102 @@
     <title>Cody Howarth</title>
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer src="/assets/icons/fontawesome/fontawesome-all.min.js"></script>
-    <link rel="stylesheet" href="/css/bootstrap.css">
+    <meta name="description" content="Cody Howarth — Software Development Team Lead at ATS Automation.">
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 
-<body id="mainpage">
-    <nav class="navbar sticky-top py-0 navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand p-0 mb-1" href="index.html">
-            <span id="navBrandName" class="h6 py-0">Cody Howarth</span>
-        </a>
-        <button class="navbar-toggler py-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link py-0" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link py-0" href="projects.html">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link py-0" href="cody_howarth_resume.pdf">Resume</a>
-                </li>
-            </ul>
+<body id="mainpage" class="terminal">
+    <nav class="term-nav term-wrap">
+        <a class="term-prompt" href="index.html">cody@howarth:~$</a>
+        <div class="term-nav-links">
+            <a href="#about">./about</a>
+            <a href="#projects">./projects</a>
+            <a href="cody_howarth_resume.pdf">./resume</a>
+            <a href="#contact">./contact</a>
         </div>
     </nav>
-    <div class="jumbotron">
-        <div class="container">
-            <h1 id="job-title" class="display-4">Cody Howarth</h1>
-            <p id="summary-text" class="lead">Software Developer</p>
+
+    <main class="term-wrap term-main">
+        <header class="term-hero">
+            <h1 id="job-title">Cody<br>Howarth<span class="term-cursor">_</span></h1>
+            <p class="term-sub">Software Development Team Lead · ATS Automation</p>
+        </header>
+
+        <div class="term-grid">
+            <section id="about" class="term-window">
+                <div class="term-bar"><span></span><span></span><span></span><b>cat about.md</b></div>
+                <div class="term-body">
+                    <p>I've always loved building things. In my first career I built tools and prototype parts as a
+                        <a href="//en.wikipedia.org/wiki/Machinist">Machinist</a>. I graduated from
+                        <a href="//www.conestogac.on.ca/">Conestoga College</a> with a
+                        <a href="//www.conestogac.on.ca/fulltime/mechanical-technician-general-machinist-co-op">Mechanical
+                            Technician Diploma</a> and completed my
+                        <a href="//www.red-seal.ca/trades/m.1ch.3n.3st-eng.html">Red Seal Trade Certification</a> while
+                        working as a full time Machinist.
+                    </p>
+                    <p>My interest in learning new technologies led me to Computer Science at the
+                        <a href="//www.utoronto.ca/">University of Toronto</a>. I currently work as Software
+                        Development Team Lead for <a href="https://illuminatemi.com/">Illuminate Manufacturing
+                            Intelligence</a> software by <a href="https://atsautomation.com/">ATS Automation</a> in
+                        Ontario, Canada.
+                    </p>
+                </div>
+            </section>
+
+            <section class="term-window">
+                <div class="term-bar"><span></span><span></span><span></span><b>git log --career</b></div>
+                <ol class="term-body term-log">
+                    <li><i>a7f3e01</i> <b>ATS Automation</b> — Software Dev Team Lead</li>
+                    <li><i>5c19b2d</i> <b>University of Toronto</b> — Computer Science</li>
+                    <li><i>3e8d4a9</i> <b>Red Seal</b> — Trade certification</li>
+                    <li><i>9b02c6f</i> <b>Conestoga College</b> — Mechanical Technician Diploma</li>
+                    <li><i>1d4e7a2</i> <b>Machinist</b> — initial commit</li>
+                </ol>
+            </section>
         </div>
-    </div>
-    <main id="mainBody" class="container pt-3">
-        <div id="about" class="row">
-            <div class="col-xl-9">
-                <h3 class="customH3">About me</h3>
-                <p>I've always loved building things. In my first career I built tools and prototype parts as a <a
-                        href="//en.wikipedia.org/wiki/Machinist">Machinist</a>.
-                    I graduated from <a href="//www.conestogac.on.ca/">Conestoga College</a> with a
-                    <a href="//www.conestogac.on.ca/fulltime/mechanical-technician-general-machinist-co-op">Mechanical
-                        Technician Diploma</a> and completed my <a
-                        href="//www.red-seal.ca/trades/m.1ch.3n.3st-eng.html">Red Seal Trade Certification</a> while
-                    working as a full time Machinist. My interest in learning new technologies eventually led me to
-                    pursue a degree in Computer Science. I graduated from
-                    <a href="//www.utoronto.ca/">University of Toronto</a>, with a specialization in Computer Science.
-                    I currently work as Software Development Team Lead for <a
-                        href="https://illuminatemi.com/">Illuminate Manufacturing Intelligence</a> software by
-                    <a href="https://atsautomation.com/">ATS Automation</a> in Ontario, Canada. Here are some <a
-                        href="projects.html">projects</a> that I've contributed
-                    to.
-                </p>
+
+        <section id="projects" class="term-window">
+            <div class="term-bar"><span></span><span></span><span></span><b>ls ~/projects</b></div>
+            <div class="term-body term-projects">
+                <a href="https://github.com/DuncanLab/OpenMaze" target="_blank">
+                    <b>OpenMaze/</b>
+                    <span>3D maze simulating the Morris water maze for neuroscience research.</span>
+                    <i>Unity 3D · JSON</i>
+                </a>
+                <a href="https://github.com/DuncanLab/RoadRAGE" target="_blank">
+                    <b>RoadRAGE/</b>
+                    <span>Driving simulator for testing decision-making processes.</span>
+                    <i>Unity 3D · JSON</i>
+                </a>
+                <a href="http://trivia-battle.herokuapp.com" target="_blank">
+                    <b>TriviaBattle/</b>
+                    <span>Multiplayer trivia game playable from any device.</span>
+                    <i>Vue.js · Node · Redis</i>
+                </a>
+                <a href="https://spaghetti-makes-me-moody.herokuapp.com/" target="_blank">
+                    <b>SpaghettiMakesMeMoody/</b>
+                    <span>Online journal with sentiment analysis via Google Natural Language API.</span>
+                    <i>React · Express · MongoDB</i>
+                </a>
+                <a class="term-more" href="projects.html">→ view all projects</a>
             </div>
-            <div class="col">
-                <h3 class="customH3">Contact</h3>
-                <div class="row">
-                    <a class="col" href="https://www.linkedin.com/in/codyhowarth/" target="_blank" data-hint="LinkedIn">
-                        <i class="fab fa-linkedin fa-lg"></i>
-                        <span>LinkedIn</span>
-                    </a>
-                </div>
-                <div class="row">
-                    <a class="col" href="https://github.com/codyhowarth" target="_blank" data-hint="GitHub">
-                        <i class="fab fa-github-square fa-lg"></i>
-                        <span>Github</span>
-                    </a>
-                </div>
-                <div class="row">
-                    <a class="col" href="https://twitter.com/codyhowarth" target="_blank" data-hint="Twitter">
-                        <i class="fab fa-twitter-square fa-lg"></i>
-                        <span>Twitter</span>
-                    </a>
-                </div>
-                <div class="row">
-                    <a class="col" href="mailto:codyhowarth@gmail.com" target="_blank" data-hint="Email">
-                        <i class="fas fa-envelope-square fa-lg"></i>
-                        <span>Email</span>
-                    </a>
-                </div>
-            </div>
-        </div>
+        </section>
+
+        <section id="contact" class="term-contact">
+            <span>$ contact --via</span>
+            <a href="https://www.linkedin.com/in/codyhowarth/" target="_blank">linkedin</a>
+            <a href="https://github.com/codyhowarth" target="_blank">github</a>
+            <a href="https://twitter.com/codyhowarth" target="_blank">twitter</a>
+            <a class="term-primary" href="mailto:codyhowarth@gmail.com">email</a>
+        </section>
     </main>
-    <footer class="footer fixed-bottom border-top border-gray pt-1 pb-1">
-        <div class="row">
-            <div class="col pl-4 pt-2">
-                &copy; 2024 Cody Howarth.
-            </div>
-            <div class="ml-auto mr-4 pt-2 pb-0">
-                <a href="https://www.linkedin.com/in/codyhowarth/" target="_blank" data-toggle="tooltip"
-                    data-placement="top" title="LinkedIn">
-                    <i class="fab fa-linkedin fa-lg mx-1"></i>
-                </a>
-                <a href="https://github.com/codyhowarth" target="_blank" data-toggle="tooltip" data-placement="top"
-                    title="Github">
-                    <i class="fab fa-github-square fa-lg mx-1"></i>
-                </a>
-                <a href="https://twitter.com/codyhowarth" target="_blank" data-toggle="tooltip" data-placement="top"
-                    title="Twitter">
-                    <i class="fab fa-twitter-square fa-lg mx-1"></i>
-                </a>
-                <a href="mailto:codyhowarth@gmail.com" target="_blank" data-toggle="tooltip" data-placement="top"
-                    title="Email">
-                    <i class="fas fa-envelope-square fa-lg mx-1"></i>
-                </a>
-            </div>
+
+    <footer class="term-footer">
+        <div class="term-wrap">
+            <p>&copy; 2026 Cody Howarth</p>
+            <p>exit 0</p>
         </div>
     </footer>
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/tether.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
 </body>
 
 </html>

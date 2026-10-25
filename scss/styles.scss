@@ -148,3 +148,63 @@ a:link {
   font-size: 0.6em;
   }
 }
+
+/* ----------------- Terminal theme (index.html) ----------------- */
+body.terminal {
+  --term-bg: #070d09;
+  --term-panel: rgba(10, 20, 14, 0.92);
+  --term-line: #24402e;
+  --term-text: #dcebe1;
+  --term-muted: #9fb5a6;
+  --term-accent: #8fe0ac;
+  --term-mono: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  margin: 0;
+  min-height: 100vh;
+  font-size: 1.1rem;
+  color: var(--term-text);
+  background: linear-gradient(rgba(7, 13, 9, 0.88), rgba(7, 13, 9, 0.88)), url("../assets/matrix2.jpg") center top / cover fixed, var(--term-bg);
+}
+.terminal a { color: var(--term-accent); }
+.terminal a:hover { color: #c4f2d3; }
+.terminal p { margin: 0; }
+.term-wrap { max-width: 1200px; margin: 0 auto; padding-left: 2rem; padding-right: 2rem; }
+.term-nav { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between; padding-top: 1.5rem; padding-bottom: 1.5rem; font-family: var(--term-mono); }
+.terminal .term-prompt { color: #fff; font-weight: 600; }
+.term-nav-links { display: flex; flex-wrap: wrap; gap: 0.25rem; }
+.term-nav-links a { padding: 0.6rem 0.75rem; }
+.term-main { display: flex; flex-direction: column; gap: 2.5rem; padding-top: 3rem; padding-bottom: 5rem; }
+.term-hero { padding: 2rem 0; }
+.terminal #job-title { margin: 0 0 1.5rem; font-size: 4.5rem; line-height: 1.2; color: #fff; text-align: left; }
+.term-cursor { color: #4fd17e; animation: term-blink 1s steps(1) infinite; }
+@keyframes term-blink { 50% { opacity: 0; } }
+.term-sub { font-family: var(--term-mono); font-size: 1.25rem; color: var(--term-accent); }
+.term-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1.5rem; }
+.term-window { background: var(--term-panel); border: 1px solid var(--term-line); border-radius: 8px; overflow: hidden; }
+.term-bar { display: flex; gap: 0.5rem; align-items: center; padding: 0.75rem 1rem; border-bottom: 1px solid var(--term-line); font-family: var(--term-mono); font-size: 0.8rem; color: var(--term-muted); }
+.term-bar span { width: 10px; height: 10px; border-radius: 50%; background: #3d5a46; }
+.term-bar b { margin-left: 0.5rem; font-weight: 400; }
+.term-body { display: flex; flex-direction: column; gap: 1rem; margin: 0; padding: 1.75rem; line-height: 1.7; }
+.term-log { list-style: none; font-family: var(--term-mono); font-size: 0.95rem; line-height: 1.5; gap: 0.9rem; }
+.term-log i { font-style: normal; color: #e8c26a; margin-right: 0.5rem; }
+.term-log b { color: #fff; font-weight: 400; }
+.term-projects { gap: 0; padding-top: 0.75rem; }
+.term-projects a { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; align-items: baseline; justify-content: space-between; padding: 1.1rem 0; border-bottom: 1px solid #1a2f22; color: var(--term-text); }
+.term-projects b { font-family: var(--term-mono); font-size: 1.1rem; color: var(--term-accent); }
+.term-projects span { flex: 1 1 320px; color: #b8cbbe; }
+.term-projects i { font-family: var(--term-mono); font-style: normal; font-size: 0.8rem; color: var(--term-muted); }
+.terminal .term-projects .term-more { display: block; border: 0; padding-bottom: 0; font-family: var(--term-mono); color: var(--term-accent); }
+.term-contact { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; font-family: var(--term-mono); }
+.term-contact span { color: var(--term-muted); margin-right: 0.5rem; }
+.term-contact a { padding: 0.75rem 1.1rem; border: 1px solid #3d5a46; border-radius: 6px; }
+.terminal .term-contact .term-primary { background: var(--term-accent); border-color: var(--term-accent); color: var(--term-bg); font-weight: 600; }
+.term-footer { border-top: 1px solid #1a2f22; background: var(--term-bg); font-family: var(--term-mono); font-size: 0.85rem; color: var(--term-muted); }
+.term-footer .term-wrap { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: space-between; padding-top: 1.4rem; padding-bottom: 1.4rem; }
+@media (max-width: 767.98px) {
+  .term-wrap { padding-left: 1rem; padding-right: 1rem; }
+  .terminal #job-title { font-size: 2.25rem; }
+  .term-grid { grid-template-columns: minmax(0, 1fr); }
+  .term-body { padding: 1.25rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .term-cursor { animation: none; }
+}
